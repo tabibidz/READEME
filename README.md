@@ -19,7 +19,7 @@
 - **نظام الاشتراكات:** تجديد الاشتراك عبر رموز التفعيل (Activation Codes) لمدد 3، 6، أو 12 شهراً.
 
 ### 3. للمشرف (Admin)
-- **بوابة إدارية آمنة:** الوصول عبر `/#admin` محمي بكلمة سر مشفرة وجلسات قصيرة الأجل.
+- **بوابة إدارية آمنة:** محمية بكلمة سر مشفرة وجلسات قصيرة الأجل.
 - **إدارة الأطباء:** البحث عن الأطباء وتعديل بياناتهم وتوثيق الحسابات (Verified Badge) وإعادة تعيين كلمات المرور أو حذف الحسابات.
 
 ---
@@ -30,66 +30,4 @@
 - تثبيت [Node.js](https://nodejs.org/) (الإصدار 18 أو أحدث).
 - حساب على [Supabase](https://supabase.com/) لإدارة قاعدة البيانات.
 
-### 2. تثبيت الحزم
-قم بفتح الطرفية (Terminal) في مجلد المشروع ونفذ:
-```bash
-npm install
-```
-
-### 3. إعداد متغيرات البيئة (Environment Variables)
-قم بإنشاء ملف `.env` في المجلد الرئيسي بالاعتماد على `.env.example`:
-```env
-PORT=3000
-ALLOWED_ORIGIN=*
-JWT_SECRET=ضع_هنا_مفتاح_سري_طويل_لتشفير_الجلسات
-ADMIN_SECRET=ضع_هنا_كلمة_سر_لوحة_التحكم
-SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_SERVICE_KEY=your_supabase_service_role_key
-```
-
-### 4. تشغيل الخادم
-```bash
-npm start
-```
-سيعمل الخادم محلياً على الرابط: `http://localhost:3000`
-
----
-
-## 📁 هيكلية المشروع (Project Structure)
-
-```text
-├── config/              # إعدادات البيئة وقاعدة بيانات Supabase
-│   ├── env.js
-│   └── supabase.js
-├── controllers/         # منطق معالجة الطلبات والتحكم
-│   ├── adminController.js
-│   ├── authController.js
-│   ├── bookingController.js
-│   ├── cronController.js
-│   ├── doctorController.js
-│   └── miscController.js
-├── middlewares/         # البرمجيات الوسيطة (المصادقة وتحديد معدل الطلبات)
-│   ├── auth.js
-│   └── rateLimiter.js
-├── public/              # ملفات الواجهة الأمامية (HTML, CSS, JS)
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   ├── admin.js
-│   │   ├── app.js
-│   │   ├── auth.js
-│   │   ├── booking.js
-│   │   ├── dashboard.js
-│   │   ├── globals.js
-│   │   ├── icons.js
-│   │   ├── location.js
-│   │   ├── router.js
-│   │   └── ui.js
-│   └── index.html
-├── routes/              # مسارات API
-│   └── api.js
-├── utils/               # أدوات مساعدة (التواريخ، الاشتراكات، الاستجابات)
-├── .env.example         # نموذج ملف متغيرات البيئة
-├── package.json         # تعريف المشروع ومكتباته
-└── server.js            # نقطة انطلاق الخادم الرئيسي
-```
+##
