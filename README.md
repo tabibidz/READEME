@@ -52,3 +52,5 @@
 ### 1. المتطلبات
 - تثبيت [Node.js](https://nodejs.org/) (الإصدار 18 أو أحدث).
 - حساب على [Supabase](https://supabase.com/) لإدارة قاعدة البيانات.
+
+## 🛠️ المطور : Khelifa Se
